@@ -68,27 +68,6 @@ def help():
 def logout():
     return render_template('booking.html')  
 
-# @app.route("/signin",methods=['POST','GET']) ##signin
-# def signin():
-#      if request.method=='POST':
-#          username=request.form.get('username')
-#          email=request.form.get('email')
-#          password=request.form.get('password')
-#          user=Register.query.filter_by(email=email).first()
-#          if user:
-#              print("email already exists")
-#              return render_template('/signin')
-#          password=generate_password_hash(password)
-#          #new_user=db.engine.execute(f"INSERT INTO `user` (`username`,`email`,`password`) VALUES ('{username}','{email}','{encpassword}')")
-#          #new_user=Userr(username=username,email=email,password=encpassword)
-
-#         #this is method 2 to save data in db
-#          new_user=Register(username=username,email=email,password=password)
-#          db.session.add(new_user)
-#          db.session.commit()
-#          return render_template('login.html')
-    
-#      return render_template('signin.html')
 
 @app.route("/signin",methods=['POST','GET']) ##signin
 def signin():
